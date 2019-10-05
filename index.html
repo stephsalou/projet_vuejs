@@ -51,27 +51,17 @@
                         <todo-item v-bind:component_message='component_message'></todo-item>
                     </ol>
                 </div>
-                <div class="col-md-4">
-                    <div class="card-group">
-                        <div class="card">
-                            <div class="card-header">
-                                Header
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Title</h5>
-                                <p class="card-text">Content</p>
-                            </div>
-                            <div class="card-footer">
-                                Footer
+            </div>
+            <div class="row">
+                    <div class="col-md-12">
+                        <div class="alert alert-info" role="alert">
+                            <div class="row">
+                                <card-item></card-item>
+                                <card-item></card-item>
+                                <card-item></card-item>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    
-                </div>
             </div>
         </div>
     </div>
@@ -90,6 +80,21 @@
             delimiters:["${","}"],
             template: '<li>${ component_message }</li>',
             })
+        Vue.component('card-item',{
+            delimiters:["${","}"],
+            template:`<div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                nom:salou </br>
+                                prenom:stephan</br>
+                                email:stephsalou@email.com</br>
+                                contact:898779</br>
+                                city:abidj</br>
+                            </div>
+                        </div>
+                    </div>
+                `
+        })
         var app = new Vue({
             el: '#app',
             data: {
